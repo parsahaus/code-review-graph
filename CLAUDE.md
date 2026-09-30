@@ -113,3 +113,16 @@ uv run code-review-graph eval               # Run evaluation benchmarks
 - **type-check**: mypy
 - **security**: bandit scan
 - **test**: pytest matrix (3.10, 3.11, 3.12, 3.13) with 50% coverage minimum
+
+<!-- agent-sync:begin -->
+## AGENTS.md, for Codex and other non-Claude agents
+
+`AGENTS.md` beside this file is what OpenAI Codex reads, the way you read this
+file. It is GENERATED from this one: it points other agents here and repeats the
+rules whose breach cannot be undone.
+
+**After you change this file, run `python ~/.agent-sync/sync_agents.py`** so the
+two stay in step. Add or amend the repeated rules in
+`~/.agent-sync/projects.json`, never in `AGENTS.md` itself, which is overwritten.
+`python ~/.agent-sync/sync_agents.py --check` reports anything that has drifted.
+<!-- agent-sync:end -->
